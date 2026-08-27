@@ -24,8 +24,9 @@ Answer in your own words (2–4 sentences each).
 
 4. What does each STRIDE letter map to, and which security property does each threat violate?
 >STRIDE stands for Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. These correspond respectively to violations of authentication, integrity, non-repudiation/accountability, confidentiality, availability, and authorization.
+
 5. What does "Secure by Design" (CISA) mean, and how does it differ from bolting security on after release?
-Secure by Design, as promoted by CISA, means security is considered from the beginning of designing and developing a product rather than being treated as an extra feature. Instead of waiting until after release to fix vulnerabilities, developers proactively design systems to reduce risks and make secure behavior the default.
+>Secure by Design, as promoted by CISA, means security is considered from the beginning of designing and developing a product rather than being treated as an extra feature. Instead of waiting until after release to fix vulnerabilities, developers proactively design systems to reduce risks and make secure behavior the default.
 
 ## Part 3 — Hands-on Lab (180 min)
 **Learning goals:** build a data-flow diagram (DFD), apply STRIDE to a real Flask app, rank risks, and propose mitigations.
