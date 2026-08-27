@@ -14,13 +14,16 @@
 ## Part 2 — Lecture Questions
 Answer in your own words (2–4 sentences each).
 1. Define the CIA triad and give one concrete failure example for each of the three properties.
-The CIA triad stands for Confidentiality, Integrity, and Availability, which are the three main goals of information security. A confidentiality failure could be a hacker accessing private customer data, an integrity failure could be someone changing a user's account balance without permission, and an availability failure could be a website going offline because of a DDoS attack.
+>The CIA triad stands for Confidentiality, Integrity, and Availability, which are the three main goals of information security. A confidentiality failure could be a hacker accessing private customer data, an integrity failure could be someone changing a user's account balance without permission, and an availability failure could be a website going offline because of a DDoS attack.
+
 2. What is a *trust boundary*, and why does data crossing one deserve extra scrutiny?
-A trust boundary is a point where data moves between components or environments with different levels of trust. Data crossing a trust boundary deserves extra scrutiny because attackers may manipulate it, so the receiving system must validate and authenticate the data before trusting it.
-3. Explain "attack surface." Name two things that increase it in a web app.
-An attack surface is the collection of possible entry points that an attacker could use to compromise a system. In a web application, adding more public API endpoints and accepting file uploads can increase the attack surface because they provide additional functionality that may contain vulnerabilities.
+>A trust boundary is a point where data moves between components or environments with different levels of trust — most commonly where untrusted external input (a client, the internet) meets trusted internal logic (your server, your database). Data crossing it deserves extra scrutiny because the receiving side can no longer assume the data is safe or well-formed; it must validate and authenticate it as if it could be hostile.
+
+3.  Explain "attack surface." Name two things that increase it in a web app.
+>An attack surface is the collection of possible entry points that an attacker could use to compromise a system. In a web application, adding more public API endpoints and accepting file uploads can increase the attack surface because they provide additional functionality that may contain vulnerabilities.
+
 4. What does each STRIDE letter map to, and which security property does each threat violate?
-STRIDE stands for Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. These correspond respectively to violations of authentication, integrity, non-repudiation/accountability, confidentiality, availability, and authorization.
+>STRIDE stands for Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. These correspond respectively to violations of authentication, integrity, non-repudiation/accountability, confidentiality, availability, and authorization.
 5. What does "Secure by Design" (CISA) mean, and how does it differ from bolting security on after release?
 Secure by Design, as promoted by CISA, means security is considered from the beginning of designing and developing a product rather than being treated as an extra feature. Instead of waiting until after release to fix vulnerabilities, developers proactively design systems to reduce risks and make secure behavior the default.
 
