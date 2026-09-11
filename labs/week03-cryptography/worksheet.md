@@ -14,18 +14,23 @@
 ## Part 2 — Lecture Questions
 Answer in your own words (2–4 sentences each).
 1. Distinguish hashing, encryption, and encoding — and give one job each is the wrong tool for.
+
 `Hashing is one-way and can't be reversed — used for password storage and integrity checks. Encryption is two-way and reversible with a key — used for protecting data you need back later. Encoding (like Base64) isn't security at all, just a format change with no key — wrong tool for hiding a password, since anyone can decode it instantly.`
 
 2. Why is a fast hash like MD5/SHA-1 a bad choice for storing passwords, and what should be used instead?
+
 `Fast hashes let an attacker try billions of guesses per second on cheap hardware. Password storage needs a slow, memory-hard KDF like argon2id instead, which is deliberately expensive to compute.`
 
 3. What is a salt, what attack does it defeat, and why must it be unique per password?
+
 `A salt is random data mixed into a password before hashing. It defeats rainbow tables, since an attacker can't use a precomputed table when every hash used different random input. It must be unique per password so two users with the same password don't get the same hash.`
 
 4. Why does AES-ECB leak structure, and what does an authenticated mode like AES-GCM add?
+
 `AES-ECB encrypts each block independently with the same key, so identical plaintext blocks always produce identical ciphertext — this leaks structure. AES-GCM adds a random nonce per message and an authentication tag, giving both confidentiality and integrity.`
 
 5. What's the difference between `random` and a CSPRNG (e.g. `secrets`), and where does it matter?
+
 `random is a deterministic PRNG, predictable if an attacker sees enough outputs. secrets is a CSPRNG built for unpredictability. It matters for anything security-related — tokens, session IDs, keys — never for values used in access control.`
 
 ![Four paired rows showing that password storage, cipher mode, randomness and key source are four separate crypto decisions: MD5 (CWE-916/327) becomes argon2id, AES-ECB with a hardcoded key (CWE-327) becomes AES-GCM with a nonce and tag, a 6-digit random.choice token (CWE-330) becomes secrets.token_urlsafe, and HARDCODED_KEY (CWE-798) becomes a key injected from the environment — so naming AES answers none of the four questions.](img/crypto-misuse.svg)
