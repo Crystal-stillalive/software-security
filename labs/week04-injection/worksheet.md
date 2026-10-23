@@ -10,7 +10,11 @@
 
 | Name | Student ID | Date | Group |
 |------|-----------|------|-------|
+<<<<<<< Updated upstream
 | Pyae Shunn Le Maung | 6631503084 | 11.9.26 | - |
+=======
+| Pyae Shunn Le Maung | 6631503084 | 13.9.27 |       |
+>>>>>>> Stashed changes
 
 ## Part 2 — Lecture Questions
 
