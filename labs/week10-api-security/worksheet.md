@@ -8,9 +8,9 @@
 
 ## Part 1 — Student Information
 
-| Name | Student ID | Date | Group |
-|------|-----------|------|-------|
-|      |           |      |       |
+|         Name        | Student ID |   Date   | Group |
+|---------------------|------------|----------|-------|
+| Pyae Shunn Le Maung | 6631503084 | 24.10.26 |   -    |
 
 ## Part 2 — Lecture Questions
 
