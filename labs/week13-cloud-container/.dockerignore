@@ -1,0 +1,14 @@
+# Week 13 — stop COPY . . from leaking sensitive files into the image (CWE-538)
+.git
+.gitignore
+.env
+*.pem
+*.key
+*.crt
+.aws
+__pycache__
+*.pyc
+node_modules
+.DS_Store
+Dockerfile*
+*.md
